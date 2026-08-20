@@ -8,7 +8,7 @@ No `if`. No `for`/`while`. No `int`, `bool`, or `list` as primitives. Just funct
 
 Lambda calculus (Church, 1936) has exactly one building block: the function. Everything else — booleans, numbers, pairs, lists, recursion — gets *encoded* on top of it rather than borrowed from the host language. This repo builds that encoding in Python, then pushes it one step further into monadic IO.
 
-### 1. Church encodings (`church.py`)
+### 1. Church encodings 
 
 - **Booleans** — `TRUE`/`FALSE` aren't values, they're functions that pick between two arguments: `TRUE = λx.λy.x`
 - **Numerals** — a number *is* "apply this function n times": `TWO = λf.λx.f(f(x))`
@@ -17,7 +17,7 @@ Lambda calculus (Church, 1936) has exactly one building block: the function. Eve
 - **Recursion** — the Y-combinator, for recursion without giving a lambda a name to call itself by
 - **Worked examples** — summing a list and filtering even numbers, without `+`-as-primitive-control-flow, `%`, or a single `if`
 
-### 2. Monadic IO (`io_monad.py`)
+### 2. Monadic IO 
 
 `print()` is impure — it reaches outside your program to touch the real world (stdout), and its return value tells you nothing about what it did. Two calls to `print("hi")` aren't interchangeable with one, which breaks referential transparency — the whole premise `church.py` is built to protect.
 
