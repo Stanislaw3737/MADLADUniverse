@@ -34,8 +34,7 @@ Python is eager: it evaluates every argument before a function call. Lambda calc
 ## Usage
 
 ```bash
-python3 church.py
-python3 io_monad.py
+python3 madlad.py
 ```
 
 No dependencies — standard library only.
