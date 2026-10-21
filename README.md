@@ -51,16 +51,12 @@ Python is eager: it evaluates every argument before a function call. Lambda calc
 python3 madlad.py
 ```
 
-No dependencies — standard library only.
-
 ## Sanity check
 
 In Haskell, this pattern is production reality: the type system statically enforces that effectful code can't sneak into pure code. In Python, it's closer to theater — nothing stops you from cheating, since there's no compiler standing at the door. But building the theater by hand is the fastest way to actually feel the idea instead of just reading about it.
 
-## License
-
+# License
+---
 MIT. Do whatever you want with it — Church would've open-sourced it too.
 
----
-
-*Author: Stanislaw*
+Author: Stanislaw
